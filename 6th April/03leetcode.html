@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //判断一个三位数是否是回文数
+//         var isPalindrome = function(x) {
+//     if(x>=100 &&x<=999){
+//         var g=parseInt(x%10);
+//         var b=parseInt(x/100);
+//         if(g==b){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }
+// };
+// console.log(isPalindrome(-121));
+    </script>
+
+    <script>
+        //判断是否是回文数
+        var isPalindrome = function(x){
+            if(x<0){
+                return false;
+            }
+            var num=0;
+            var origin=x;
+            while(x>0){
+                num=num*10+x%10;
+                x=parseInt(x/10);
+            }
+            return num==origin;
+        }
+        console.log(isPalindrome(12211221));
+
+
+    </script>
+</body>
+</html>

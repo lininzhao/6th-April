@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div title="hiya" id="box">hello world</div>
+    <script>
+        //获取属性名
+        var div=document.querySelector("#box");
+        var attr=div.attributes;
+        console.log(attr);
+        console.log(attr[1]);
+
+        var attri=div.getAttributeNode('title');
+        console.log(attri);
+        //获取属性值
+        var res=div.getAttribute('title');
+        console.log(typeof res,res);
+        //利用属性节点获取属性值
+        console.log(typeof attri.value,attri.value);
+    </script>
+</body>
+</html>
